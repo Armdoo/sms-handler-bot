@@ -14,7 +14,7 @@ const showSmsRuMenu = async () => {
   if (choice === '1') {
     const { id, number } = (await SmsRuService.buyNumber()) || {};
     if (id && number) {
-      console.log(colors.green(`Number purchased: ${number} (ID: ${id})`));
+      console.log((`Number purchased: ${number} (ID: ${id})`));
       SmsRuService.checkOtp(id);
     }
   } else if (choice === '2') {
